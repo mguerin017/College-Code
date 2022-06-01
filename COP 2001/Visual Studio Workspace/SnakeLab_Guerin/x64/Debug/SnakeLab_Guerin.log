@@ -1,0 +1,5 @@
+﻿  line.cpp
+C:\Users\Mewk\OneDrive - Florida Gulf Coast University\COP 2001\Visual Studio Workspace\SnakeLab_Guerin\line.cpp(102,19): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  slope_intercept_Guerin.cpp
+  Generating Code...
+  SnakeLab_Guerin.vcxproj -> C:\Users\Mewk\OneDrive - Florida Gulf Coast University\COP 2001\Visual Studio Workspace\SnakeLab_Guerin\x64\Debug\SnakeLab_Guerin.exe

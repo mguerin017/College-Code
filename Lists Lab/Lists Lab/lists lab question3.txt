@@ -1,0 +1,28 @@
+  // mystery method belongs to the DynamicList class, returns Object
+  Object mystery(){
+		if(head==null){ 
+ 			return null;
+		}else{
+			DynamicNode current = null;
+			DynamicNode temp1 = head, temp2 = head;
+			
+			while(temp2.getNext()!=null){
+				current = temp1;
+				temp1 = temp1.getNext();
+				temp2 = temp2.getNext();
+				
+				if(temp2.getNext() == null){ 
+					return null;
+				}else{
+					temp2 = temp2.getNext(); 
+				}
+			}
+
+			if(current == null){  
+				head = null;
+			}else{
+				current.setNext(temp1.getNext()); 
+			}
+			return temp1.getInfo();
+		}
+	}

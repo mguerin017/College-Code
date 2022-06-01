@@ -1,0 +1,129 @@
+// this code is similar to the lecture 5 slides
+// some small items might be different for example
+// in some methods when given a null node, it uses 
+// System.exit() rather than throwing an exception 
+// returning null
+// the code mostly came from the langsam book
+
+class DynamicNode{
+	private Object info;
+	private DynamicNode next;
+
+	public DynamicNode(Object x, DynamicNode n){
+		info=x;
+		next=n;
+	}
+
+	public Object getInfo(){
+		return info;
+	}
+
+	public DynamicNode getNext(){
+		return next;
+	}
+
+	public void setInfo(Object x){
+		info=x;
+	}
+
+	public void setNext(DynamicNode n){
+		next=n;
+	}
+	
+	public String toString(){
+		return info.toString();
+	}
+}
+
+// ------------------------------------
+public class DynamicList{
+	private DynamicNode head;
+
+	public DynamicList(){
+		head=null;
+	}
+
+	public DynamicList(DynamicNode head) {
+		this.head = head; 
+	}
+
+	public boolean isEmpty(){
+		return head==null;
+	}
+
+	public void insertFirst(Object x){
+		DynamicNode q=new DynamicNode(x,null);
+		if(!isEmpty())
+			q.setNext(head);
+		head=q;
+	}
+
+	public void insertAfter(DynamicNode p, Object x){
+		if(p==null){
+			System.out.println("void insertion");
+			System.exit(1); //or just return;
+		}
+		DynamicNode q=new DynamicNode(x,p.getNext());
+		p.setNext(q);
+	}
+
+	public Object deleteFirst(){
+		if(isEmpty()){
+			System.out.println("void deletion");
+			System.exit(1); //or just return null;
+		}
+		Object temp=head.getInfo();
+		if(head.getNext()==null)
+			head=null;
+		else
+			head=head.getNext();
+		return temp;
+	}
+
+	public Object deleteAfter(DynamicNode p){
+		if(p==null || p.getNext()==null){
+			System.out.println("void deletion");
+			System.exit(1);
+		}
+		DynamicNode q=p.getNext();
+		Object temp=q.getInfo();
+		p.setNext(q.getNext());
+		return temp;
+	}
+
+	public DynamicNode getList(){
+		return head;
+	}
+
+
+	public void print(){
+		if(head==null){
+			System.out.println("null");
+		}
+		DynamicNode p=head;
+		while(p!=null){
+			System.out.print(p.getInfo()+((p.getNext()!=null)?"->":""));
+			p=p.getNext();
+		}
+		System.out.println();
+	}
+
+	// OR a simpler take
+	void printList(){
+		DynamicNode p;
+		for (p=head; p!=null; p=p.getNext())
+	     		System.out.println(p.info + " ");
+	}
+	... 
+	
+
+// -------------------------------- 
+// TODO main method 
+
+DynamicList myList = new DynamicList();
+
+myList.insertFirst(3);
+myList.insertFirst(5);
+myList.insertFirst(8);
+
+myList.printList();

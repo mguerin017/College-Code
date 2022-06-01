@@ -1,0 +1,66 @@
+import java.util.*;
+import java.io.*;
+import java.lang.*;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+
+public class Vehicle {
+
+	private int axle;
+	private int payType;
+	private int vehicleType;
+	private double vehicleTotal;
+	
+	public int getAxle() {
+		return this.axle;
+	}
+	
+	public void setAxle(int newAxle) {
+		this.axle = newAxle;
+	}
+	
+	public int getPayType() {
+		return this.payType;
+	}
+	
+	public void setPayType(int newPayType) {
+		this.payType = newPayType;
+	}
+	
+	public int getVehicleType() {
+		return this.vehicleType;
+	}
+	
+	public void setVehicleType(int newVehicleType) {
+		this.vehicleType = newVehicleType;
+	}
+	
+	public double getVehicleTotal() {
+		return this.vehicleTotal;
+	}
+	
+	public void setVehicleTotal(double newVehicleTotal) {
+		this.vehicleTotal = newVehicleTotal;
+	}
+	
+	public void vehicleToll(TollBooth booth, TollCollection calculate) {
+		Scanner keyboard = new Scanner(System.in);
+		NumberFormat twoDec = new DecimalFormat("#0.00");
+		// Determine vehicle type
+		System.out.println("Is vehicle " + booth.getJ() + " 1) electric, 2) hybrid, or 3) gasoline? (Enter a number)");
+		vehicleType = keyboard.nextInt();
+		// Determine number of axles
+		System.out.println("How many axles does vehicle " + booth.getJ() + " have? (Enter a number)");
+		axle = keyboard.nextInt();
+		// Determine payment type
+		System.out.println("Is vehicle " + booth.getJ() + " paying with 1) cash, 2) card, or 3) an electronic payment system, such as SunPass? (Enter a number)");
+		payType = keyboard.nextInt();
+		System.out.println();
+		// Calculate the toll for the vehicle
+		vehicleTotal = calculate.getBaseRate();
+		calculate.axles(this);
+		calculate.vehicleTypes(this);
+		calculate.payTypes(this);
+		System.out.println("The toll collected for vehicle " + booth.getJ() + " was " + twoDec.format(vehicleTotal) + ".");
+	}
+}

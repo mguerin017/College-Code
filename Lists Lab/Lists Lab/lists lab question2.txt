@@ -1,0 +1,19 @@
+    public DynamicNode searchInsert(Object x) {				
+		if(!this.isEmpty())	{
+			DynamicNode nd = head;
+			while (nd.getNext() != null) {
+				if (nd.getInfo().equals(x)) {
+					return nd;
+				}
+				nd = nd.getNext();
+			}
+
+			nd.setNext(new DynamicNode(x, null));
+			nd = nd.getNext();
+			return nd;
+		}
+
+		DynamicNode nd2 = new DynamicNode(x, null);
+		head = nd2;
+		return nd2;	
+	}

@@ -1,0 +1,2 @@
+//In this file, please type the number of booths at the toll station.
+3

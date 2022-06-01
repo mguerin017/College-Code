@@ -1,0 +1,59 @@
+import java.util.*;
+
+public class TollBooth {
+
+	private int numVehicles;
+	private ArrayList<Vehicle> vehicleList;
+	private int j = 1;
+	
+	// Use these methods to manage loop iteration
+		public int getJ() {
+			return this.j;
+		}
+		
+		public void setJ(int newJ) {
+			this.j = newJ;
+		}
+		
+	// Use these methods to manage the number of vehicles
+		public int getNumVehicles() {
+			return this.numVehicles;
+		}
+		
+		public void setNumVehicles(int newNumVehicles) {
+			this.numVehicles = newNumVehicles;
+		}
+		
+	// Use these methods to manage the array of vehicles
+		public TollBooth() {
+			this.vehicleList = new ArrayList<Vehicle>();
+		}
+		
+		public ArrayList<Vehicle> getVehicleList() {
+			return this.vehicleList;
+		}
+		
+		public void addToVehicleList(Vehicle car) {
+			this.vehicleList.add(car);
+		}
+		
+		public Vehicle getIndexVehicleList(int index) {
+			return this.vehicleList.get(index);
+		}
+		
+		public int getSizeVehicleList() {
+			return this.vehicleList.size();
+		}
+		
+	// Use the following method to create an object for each vehicle
+		public void countVehicles(TollStation station) {
+			Scanner keyboard = new Scanner(System.in);
+			System.out.println("How many vehicles used booth " + station.getI() + "?");
+			this.setNumVehicles(keyboard.nextInt());
+			for (; this.getJ() < this.getNumVehicles() + 1; this.setJ(this.getJ()+1)) {
+				this.addToVehicleList(new Vehicle());
+				//Use methods from Vehicle class here
+			}
+			
+		}
+}

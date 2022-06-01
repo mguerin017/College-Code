@@ -1,0 +1,19 @@
+//In this file, please type out the specs of each vehicle in sets of three lines, with no empty lines. The first line in the set should be the vehicle type, entered as a number that corresponds to 1) electric, 2) hybrid, or 3) gasoline. The second line in the set should be the number of axles, which should be no less than 1. The third line in the set should be the pay type, entered as a number that corresponds to 1) cash, 2) card, or 3) an electronic payment system, such as SunPass.
+1
+1
+1
+2
+2
+2
+3
+3
+3
+1
+2
+3
+2
+3
+1
+3
+1
+2

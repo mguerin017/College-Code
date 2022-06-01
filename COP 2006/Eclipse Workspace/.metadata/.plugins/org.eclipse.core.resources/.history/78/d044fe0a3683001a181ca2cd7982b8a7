@@ -1,0 +1,11 @@
+import java.util.*;
+import java.io.*;
+import java.lang.*;
+
+public class Vehicle {
+
+	private int axle;
+	private int payType;
+	private int vehicleType;
+	
+}

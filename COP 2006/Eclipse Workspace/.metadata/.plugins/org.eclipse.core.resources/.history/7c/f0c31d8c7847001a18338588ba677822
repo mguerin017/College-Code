@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+/* @author Mark Guerin
+ * This program computes charging time, charging speed, and cost of charging an electric vehicle
+ */
+
+public class EVCharging {
+
+	public static void main(String[] args) {
+
+		// Get Battery capacity, mileage, power outlet voltage and current, and percentage of charge from user
+		double cap = 0
+		Scanner keyboard = new Scanner(System.in);
+		System.out.println("Enter the battery capacity of your car in kWh.");
+		cap = keyboard.nextDouble();
+		
+		double mile = 0
+		System.out.println("Enter the mileage of your car in kWh/100 mi.");
+		mile = keyboard.nextDouble();
+		
+		double voltage = 0
+		System.out.println("Enter the output voltage of yor power socket in volts.");
+		voltage = keyboard.nextDouble();
+		
+		double current = 0
+		System.out.println("Enter the output current of your power socket in amperes.");
+		current = keyboard.nextDouble();
+		
+		double percent = 0
+		System.out.println("What percentage of your battery do you want to charge?");
+		percent = keyboard.nextDouble();
+	}
+
+}

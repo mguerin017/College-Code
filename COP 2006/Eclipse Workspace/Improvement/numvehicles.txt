@@ -1,0 +1,4 @@
+//In this file, please type out the number of vehicles in each booth, separating the number of vehicles in each booth by a line break, with no empty lines.
+1
+2
+3

@@ -1,0 +1,75 @@
+import java.util.*;
+import java.io.*;
+import java.lang.*;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+
+public class TollBooth {
+
+	private int numVehicles;
+	private double boothTotal;
+	private ArrayList<Vehicle> vehicleList;
+	private int j;
+	
+	// Use these methods to manage loop iteration
+		public int getJ() {
+			return this.j;
+		}
+		
+		public void setJ(int newJ) {
+			this.j = newJ;
+		}
+		
+	// Use these methods to manage the number of vehicles
+		public int getNumVehicles() {
+			return this.numVehicles;
+		}
+		
+		public void setNumVehicles(int newNumVehicles) {
+			this.numVehicles = newNumVehicles;
+		}
+		
+	// Use these methods to manage the array of vehicles
+		public TollBooth() {
+			this.vehicleList = new ArrayList<Vehicle>();
+		}
+		
+		public ArrayList<Vehicle> getVehicleList() {
+			return this.vehicleList;
+		}
+		
+		public void addToVehicleList(Vehicle car) {
+			this.vehicleList.add(car);
+		}
+		
+		public Vehicle getIndexVehicleList(int index) {
+			return this.vehicleList.get(index);
+		}
+		
+		public int getSizeVehicleList() {
+			return this.vehicleList.size();
+		}
+		
+	// Use these methods to manage the total tolls collected by the toll booth
+		public double getBoothTotal() {
+			return this.boothTotal;
+		}
+		
+		public void setBoothTotal(double newTotal) {
+			this.boothTotal = newTotal;
+		}
+		
+	// Use the following method to create an object for each vehicle
+		public void countVehicles(TollStation station, Vehicle car, TollCollection calculate) {
+			Scanner keyboard = new Scanner(System.in);
+			NumberFormat twoDec = new DecimalFormat("#0.00");
+			System.out.println("How many vehicles used booth " + station.getI() + "?");
+			this.setNumVehicles(keyboard.nextInt());
+			for (j = 1; j < this.getNumVehicles() + 1; j++) {
+				this.addToVehicleList(new Vehicle());
+				car.vehicleToll(this, calculate);
+				System.out.println("The total tolls collected by booth " + j + " is $" + twoDec.format(boothTotal) + ".");
+			}
+			
+		}
+}

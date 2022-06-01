@@ -1,0 +1,31 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class tollStation {
+
+	private int numBooths;
+	
+	public int getNumBooths() {
+		return this.numBooths;
+	}
+	
+	public void setNumBooths(int newNumBooths) {
+		this.numBooths = newNumBooths;
+	}
+	
+	public static void main(String[] args) {
+		tollStation station = new tollStation();
+		Scanner keyboard = new Scanner(System.in);
+		ArrayList<tollBooths> tollBoothList = new ArrayList<tollBooths>();
+		System.out.println("How many toll booths were used at the station?");
+		station.setNumBooths(keyboard.nextInt());
+		for (int i = 0; i < station.getNumBooths(); i++) {
+			tollBoothList.add(new tollBooths());
+		}
+		keyboard.close();
+		for (int i = 0; i < tollBoothList.size(); i++) {
+			System.out.println(tollBoothList.get(i));
+		}
+	}
+
+}

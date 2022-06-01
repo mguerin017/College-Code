@@ -1,0 +1,14 @@
+import java.util.*;
+import java.io.*;
+import java.lang.*;
+
+public class Vehicle {
+
+	private final int ELECTRIC = 1;
+	private final int HYBRID = 2;
+	private final int GASOLINE = 3;
+	private final int CASH = 1;
+	private final int CARD = 2;
+	private final int ELECTRONICSYSTEM = 3;
+	
+}

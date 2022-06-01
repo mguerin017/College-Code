@@ -1,0 +1,2 @@
+C:\Users\Mewk\OneDrive - Florida Gulf Coast University\COP 2001\Visual Studio Workspace\HelloWorld\Debug\HelloWorld.exe
+C:\Users\Mewk\OneDrive - Florida Gulf Coast University\COP 2001\Visual Studio Workspace\HelloWorld\Debug\HelloWorld.pdb

@@ -1,0 +1,62 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class TollBooth {
+
+	private int numVehicles;
+	private ArrayList<Vehicle> vehicleList;
+	private int j = 0;
+	
+	public int getJ() {
+		return this.j;
+	}
+	
+	public void setJ(int newJ) {
+		this.j = newJ;
+	}
+	
+	// Use these methods to manage the number of vehicles
+		public int getNumVehicles() {
+			return this.numVehicles;
+		}
+		
+		public void setNumVehicles(int newNumVehicles) {
+			this.numVehicles = newNumVehicles;
+		}
+		
+	// Use these methods to manage the array of vehicles
+		public void tollBooth() {
+			this.vehicleList = new ArrayList<Vehicle>();
+		}
+		
+		public ArrayList<Vehicle> getVehicleList() {
+			return this.vehicleList;
+		}
+		
+		public void addToVehicleList(Vehicle car) {
+			this.vehicleList.add(car);
+		}
+		
+		public Vehicle getIndexVehicleList(int index) {
+			return this.vehicleList.get(index);
+		}
+		
+		public int getSizeVehicleList() {
+			return this.vehicleList.size();
+		}
+		
+	// Use the following method to create an object for each vehicle
+		public void countVehicles(TollStation station) {
+			TollBooth booth = new TollBooth();
+			Scanner input = new Scanner(System.in);
+			booth.tollBooth();
+			System.out.println("How many vehicles used booth " + station.getI() + "?");
+			booth.setNumVehicles(input.nextInt());
+			input.close();
+			for (booth.getJ(); booth.getJ() < booth.getNumVehicles(); booth.setJ(booth.getJ()+1)) {
+				booth.addToVehicleList(new Vehicle());
+				//Use methods from Vehicle class here
+			}
+			
+		}
+}

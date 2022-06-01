@@ -1,0 +1,46 @@
+import java.util.*;
+import java.io.*;
+import java.lang.*;
+
+public class Vehicle {
+
+	private int axle;
+	private int payType;
+	private int vehicleType;
+	private double vehicleTotal;
+	
+	public int getAxle() {
+		return this.axle;
+	}
+	
+	public void setAxle(int newAxle) {
+		this.axle = newAxle;
+	}
+	
+	public int getPayType() {
+		return this.payType;
+	}
+	
+	public void setPayType(int newPayType) {
+		this.payType = newPayType;
+	}
+	
+	public int getVehicleType() {
+		return this.vehicleType;
+	}
+	
+	public void setVehicleType(int newVehicleType) {
+		this.vehicleType = newVehicleType;
+	}
+	
+	public double getVehicleTotal() {
+		return this.vehicleTotal;
+	}
+	
+	public void setVehicleTotal(double newVehicleTotal) {
+		this.vehicleTotal = newVehicleTotal;
+	}
+	
+	public void calculateToll(TollBooth booth, TollCollection calculate, Scanner keyboard) {
+	}
+}

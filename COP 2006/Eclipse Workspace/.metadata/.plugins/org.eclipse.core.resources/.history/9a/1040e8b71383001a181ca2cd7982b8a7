@@ -1,0 +1,55 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class TollStation {
+
+	private int numBooths;
+	private ArrayList<TollBooth> tollBoothList;
+	
+	// Use these methods to manage the number of toll booths
+	public int getNumBooths() {
+		return this.numBooths;
+	}
+	
+	public void setNumBooths(int newNumBooths) {
+		this.numBooths = newNumBooths;
+	}
+	
+	// Use these methods to manage the array of toll booths
+	public void tollStation() {
+		this.tollBoothList = new ArrayList<TollBooth>();
+	}
+	
+	public ArrayList<TollBooth> getTollBoothList() {
+		return this.tollBoothList;
+	}
+	
+	public void addToTollBoothList(TollBooth booth) {
+		this.tollBoothList.add(booth);
+	}
+	
+	public TollBooth getIndexTollBoothList(int index) {
+		return this.tollBoothList.get(index);
+	}
+	
+	public int getSizeTollBoothList() {
+		return this.tollBoothList.size();
+	}
+	
+	// Main method
+	public static void main(String[] args) {
+		TollStation station = new TollStation();
+		Scanner keyboard = new Scanner(System.in);
+		station.tollStation();
+		System.out.println("How many toll booths were used at the station?");
+		station.setNumBooths(keyboard.nextInt());
+		for (int i = 0; i < station.getNumBooths(); i++) {
+			station.addToTollBoothList(new TollBooth());
+		}
+		keyboard.close();
+		//for (int i = 0; i < station.getSizeTollBoothList(); i++) {
+		//	System.out.println(station.getIndexTollBoothList(i));
+		//}
+	}
+
+}

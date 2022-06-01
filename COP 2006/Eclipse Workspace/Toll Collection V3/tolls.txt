@@ -1,0 +1,14 @@
+Today's Date 
+The toll collected for vehicle 1 at booth 1 was $1.00.
+The total tolls collected by booth 1 is $1.00.
+The toll collected for vehicle 1 at booth 2 was $2.59.
+The toll collected for vehicle 2 at booth 2 was $3.20.
+The total tolls collected by booth 2 is $5.79.
+The toll collected for vehicle 1 at booth 3 was $1.20.
+The toll collected for vehicle 2 at booth 3 was $3.00.
+The toll collected for vehicle 3 at booth 3 was $2.30.
+The total tolls collected by booth 3 is $6.50.
+The total collected via cash is $4.00.
+The total collected via card is $4.89.
+The total collected via electronic systems is $4.40.
+The grand total collected by the station is $13.29.

@@ -1,0 +1,76 @@
+import java.util.*;
+import java.io.*;
+import java.lang.*;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+
+public class TollCollection {
+
+	private final int ELECTRIC = 1;
+	private final int HYBRID = 2;
+	private final int GASOLINE = 3;
+	private final int CASH = 1;
+	private final int CARD = 2;
+	private final int ELECTRONICSYSTEM = 3;
+	private double cashTotal;
+	private double cardTotal;
+	private double elecTotal;
+	
+	
+	public void axles(Vehicle car) {
+		if (car.axle <= 3) {
+			car.vehicleTot = car.vehicleTot + car.axle - 1;
+		}
+		else if (car.axle > 3) {
+			car.vehicleTot = car.vehicleTot + 2 + (car.axle - 3) * 5;
+		}
+		else {
+			System.out.println();
+			System.out.println("You have made an invalid input. Please start over.");
+			return;
+		}
+	}
+	
+	public void vehicleTypes(Vehicle car) {
+		if (car.vehicleType == ELECTRIC) {
+			car.vehicleTot = car.vehicleTot * 0.5;
+		}
+		else if (car.vehicleType == HYBRID) {
+			car.vehicleTot = car.vehicleTot * 0.75;
+		}
+		else if (car.vehicleType == GASOLINE) {
+			car.vehicleTot = car.vehicleTot * 1;
+		}
+		else {
+			System.out.println();
+			System.out.println("You have made an invalid input. Please start over.");
+			return;
+		}
+	}
+	
+	public void payTypes(Vehicle car, TollCollection total) {
+		if (car.payType == CASH) {
+			car.vehicleTot = car.vehicleTot * 1;
+			total.cashTotal += car.vehicleTot;
+		}
+		else if (car.payType == CARD) {
+			car.vehicleTot = car.vehicleTot * 1.15;
+			total.cardTotal += car.vehicleTot;
+		}
+		else if (car.payType == ELECTRONICSYSTEM) {
+			car.vehicleTot = car.vehicleTot * 0.8;
+			total.elecTotal += car.vehicleTot;
+		}
+		else {
+			System.out.println();
+			System.out.println("You have made an invalid input. Please start over.");
+			return;
+		}
+	}
+	
+	public static void main(String[] args) {
+		TollStation station = new TollStation();
+		station.countBooths();
+	}
+
+}

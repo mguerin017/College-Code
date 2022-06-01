@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class ClassStanding {
+
+	public static void main(String[] args) {
+		
+		// Get credit hours from user
+		Scanner keyboard = new Scanner(System.in);
+		System.out.println("Enter your credit hours:");
+		int hours = keyboard.nextInt();
+		
+		//Determine class standing
+		String standing = "";
+		if (hours > 120) {
+			standing = "Excess";
+		}
+		else if (hours >= 90) {
+			standing = "Senior";
+		}
+		else if (hours >= 60) {
+			standing = "Junior";
+		}
+		else if (hours >= 30) {
+			standing = "Sophomore";
+		}
+		else if (hours >= 0) {
+			standing = "Freshman";
+		}
+		else if (hours < 0) {
+			standing = "Invalid";
+		}
+		keyboard.close();
+		
+		// Output standing to user
+		System.out.println("You are a " + standing);
+	
+	}
+}

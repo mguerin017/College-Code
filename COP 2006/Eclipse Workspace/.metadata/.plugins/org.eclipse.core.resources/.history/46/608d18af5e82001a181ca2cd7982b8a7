@@ -1,0 +1,13 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class tollStation {
+
+	public static void main(String[] args) {
+		Scanner keyboard = new Scanner(System.in);
+		ArrayList<tollBooths> tollBoothList = new ArrayList<tollBooths>();
+		System.out.println("How many toll booths were used at the station?");
+		
+	}
+
+}

@@ -1,0 +1,15 @@
+import java.util.*;
+
+interface Shape {}
+class Circle implements Shape{}
+
+public class Test
+{
+    public static void main(String[] args) {
+        List ls = new ArrayList(); // Line 1
+        List lc = new ArrayList(); // Line 2
+        Circle c = new Circle();
+        ls.add(c); // Line 3
+        lc.add(c); // Line 4
+    }
+}

@@ -1,0 +1,13 @@
+String name = new String ("Mark");
+String name2 = new String ("Mark");
+name == name2;
+int a = 5;
+int b = 5;
+a == b;
+String name3 = "Guerin";
+String name4 = "Guerin";
+name3 == name4;
+String name = new String ("Mark");
+String name2 = "Mark Guerin";
+name = name2;
+name.charAt(3)
